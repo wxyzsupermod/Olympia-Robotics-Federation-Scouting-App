@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class Stand_Scouting extends AppCompatActivity {
 
@@ -15,18 +16,18 @@ public class Stand_Scouting extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stand__scouting);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab.setOnClickListener(new View.OnClickListener() {
+            //@Override
+            /*public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
             }
-        });
+        });*/
     }
 
     @Override
@@ -53,4 +54,21 @@ public class Stand_Scouting extends AppCompatActivity {
     //This is Android Studio created junk leave it alone
 
 
+
+    /////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
+    ///////////////////////Start////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
+
+    public int BallsScoredInt = 0;
+
+    public void BallCounter(View v)
+            //this can be used for almomst any counting textbox you need from button
+    {
+        EditText BallsScored = (EditText) findViewById(R.id.BallsScoredEdittext);
+        //NumberOfTotesInt = NumberOfTotesInt + 1;
+        BallsScoredInt = Integer.parseInt(BallsScored.getText().toString()) + 1;
+        BallsScored.setText("" + BallsScoredInt);
+    }
 }
