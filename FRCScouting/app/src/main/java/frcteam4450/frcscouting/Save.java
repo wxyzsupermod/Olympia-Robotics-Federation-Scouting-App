@@ -14,7 +14,7 @@ import java.util.LinkedList;
  * Created by wxyzs on 1/13/2016.
  */
 public class Save {
-    private static final int DATABASE_VERSION = 1;
+    /*private static final int DATABASE_VERSION = 1;
     public static final String SCOUTING_TABLE_NAME = "scouting";
     public static final String SCOUTING_TABLE_CREATE = "CREATE TABLE `" + SCOUTING_TABLE_NAME + "` (`match_number` INT(4) NOT NULL, `team_number` INT(4) NOT NULL, `alliance` BOOLEAN NOT NULL DEFAULT FALSE, `teleop` BOOLEAN NOT NULL, `moat_crossed` INT(2) NOT NULL DEFAULT 0, `moat_failed` INT(2) NOT NULL DEFAULT 0, `portcullis_crossed` INT(2) NOT NULL DEFAULT 0, `portcullis_failed` INT(2) NOT NULL DEFAULT 0, `sallyport_crossed` INT(2) NOT NULL DEFAULT 0, `sallyport_failed` INT(2) NOT NULL DEFAULT 0, `ramparts_crossed` INT(2) NOT NULL DEFAULT 0, `ramparts_failed` INT(2) NOT NULL DEFAULT 0, `chivaldefrise_crossed` INT(2) NOT NULL DEFAULT 0, `chivaldefrise_failed` INT(2) NOT NULL DEFAULT 0, `rockwall_crossed` INT(2) NOT NULL DEFAULT 0, `rockwall_failed` INT(2) NOT NULL DEFAULT 0, `roughterrain_crossed` INT(2) NOT NULL DEFAULT 0, `roughterrain_failed` INT(2) NOT NULL DEFAULT 0, `lowbar_crossed` INT(2) NOT NULL DEFAULT 0, `lowbar_failed` INT(2) NOT NULL DEFAULT 0, `lowgoalleft_capable` BOOLEAN NOT NULL DEFAULT FALSE, `lowgoalleft_scored` INT(2) NOT NULL DEFAULT 0, `lowgoalleft_missed` INT(2) NOT NULL DEFAULT 0, `lowgoalright_capable` BOOLEAN NOT NULL DEFAULT FALSE, `lowgoalright_scored` INT(2) NOT NULL DEFAULT 0, `lowgoalright_missed` INT(2) NOT NULL DEFAULT 0, `highgoalleft_capable` BOOLEAN NOT NULL DEFAULT FALSE, `highgoalleft_scored` INT(2) NOT NULL DEFAULT 0, `highgoalleft_missed` INT(2) NOT NULL DEFAULT 0, `highgoalcenter_capable` BOOLEAN NOT NULL DEFAULT FALSE, `highgoalcenter_scored` INT(2) NOT NULL DEFAULT 0, `highgoalcenter_missed` INT(2) NOT NULL DEFAULT 0, `highgoalright_capable` BOOLEAN NOT NULL DEFAULT FALSE, `highgoalright_scored` INT(2) NOT NULL DEFAULT 0, `highgoalright_missed` INT(2) NOT NULL DEFAULT 0)";
 
@@ -169,5 +169,5 @@ public class Save {
         NuggetSerializable<LinkedList<HashMap<String, HashMap<String, Object>>>> nugget = new NuggetSerializable<>("", for_serialization);
         Nugget.writeNugget(nugget, new DataOutputStream(out));
         out.flush();
-    }
+    }*/
 }
