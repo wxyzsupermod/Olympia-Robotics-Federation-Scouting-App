@@ -49,10 +49,10 @@
         android:layout_height="wrap_content"
         android:text="Low Goal"
         android:id="@+id/LowGoalCheckBox"
-        android:layout_alignTop="@+id/HighGoalCheckBox"
-        android:layout_alignLeft="@+id/Title"
-        android:layout_alignStart="@+id/Title"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_alignBottom="@+id/HighGoalCheckBox"
+        android:layout_toLeftOf="@+id/checkBox"
+        android:layout_toStartOf="@+id/checkBox" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -125,33 +125,6 @@
         android:layout_alignParentStart="true"
         android:checked="false" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fast is &lt; 3 sec"
-        android:id="@+id/DefineSpeed"
-        android:layout_alignTop="@+id/FastPickup"
-        android:layout_toRightOf="@+id/MediumPickup"
-        android:layout_toEndOf="@+id/MediumPickup" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medium is more than 3 but less than 7 sec"
-        android:id="@+id/MediumDefiner"
-        android:layout_below="@+id/howfastpickuplabel"
-        android:layout_toRightOf="@+id/LowGoalCheckBox"
-        android:layout_toEndOf="@+id/LowGoalCheckBox" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Slow is > 7 sec"
-        android:id="@+id/SlowDefiner"
-        android:layout_below="@+id/MediumDefiner"
-        android:layout_alignRight="@+id/howfastpickuplabel"
-        android:layout_alignEnd="@+id/howfastpickuplabel" />
-
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -186,10 +159,10 @@
         android:layout_height="wrap_content"
         android:text="Slow"
         android:id="@+id/SlowObstacleCross"
-        android:layout_alignTop="@+id/MediumObstacleCross"
-        android:layout_toRightOf="@+id/SlowDefiner"
-        android:layout_toEndOf="@+id/SlowDefiner"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_above="@+id/defensecheckbox"
+        android:layout_toRightOf="@+id/defensecheckbox"
+        android:layout_toEndOf="@+id/defensecheckbox" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -216,10 +189,10 @@
         android:layout_height="wrap_content"
         android:text="Neither Goal"
         android:id="@+id/neithergoal"
-        android:layout_alignTop="@+id/LowGoalCheckBox"
-        android:layout_toRightOf="@+id/Obstaclecrossspeed"
-        android:layout_toEndOf="@+id/Obstaclecrossspeed"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_above="@+id/LabelForWhichObstacle"
+        android:layout_toRightOf="@+id/LowGoalCheckBox"
+        android:layout_toEndOf="@+id/LowGoalCheckBox" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -246,10 +219,10 @@
         android:layout_height="wrap_content"
         android:text="Teeter Totter"
         android:id="@+id/TeeterTotterCheckBox"
-        android:layout_alignTop="@+id/PortcullisCheckbox"
-        android:layout_alignLeft="@+id/LowGoalCheckBox"
-        android:layout_alignStart="@+id/LowGoalCheckBox"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_above="@+id/RampartCheckBox"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -276,10 +249,10 @@
         android:layout_height="wrap_content"
         android:text="DrawBridge"
         android:id="@+id/DrawbridgeCheckBox"
+        android:checked="false"
         android:layout_below="@+id/TeeterTotterCheckBox"
-        android:layout_alignLeft="@+id/TeeterTotterCheckBox"
-        android:layout_alignStart="@+id/TeeterTotterCheckBox"
-        android:checked="false" />
+        android:layout_alignRight="@+id/Obstaclecrossspeed"
+        android:layout_alignEnd="@+id/Obstaclecrossspeed" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -306,10 +279,10 @@
         android:layout_height="wrap_content"
         android:text="Rough Terrain"
         android:id="@+id/RoughTerrainCheckBox"
+        android:checked="false"
         android:layout_below="@+id/DrawbridgeCheckBox"
         android:layout_alignLeft="@+id/DrawbridgeCheckBox"
-        android:layout_alignStart="@+id/DrawbridgeCheckBox"
-        android:checked="false" />
+        android:layout_alignStart="@+id/DrawbridgeCheckBox" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -337,18 +310,54 @@
         android:layout_height="wrap_content"
         android:id="@+id/BallsScoredEdittext"
         android:text="0"
-        android:layout_below="@+id/SlowDefiner"
-        android:layout_alignRight="@+id/DrawbridgeCheckBox"
-        android:layout_alignEnd="@+id/DrawbridgeCheckBox" />
+        android:layout_alignBottom="@+id/button"
+        android:layout_toRightOf="@+id/SlowObstacleCross"
+        android:layout_toEndOf="@+id/SlowObstacleCross" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ball Scored"
         android:id="@+id/button"
-        android:layout_below="@+id/SlowDefiner"
-        android:layout_toRightOf="@+id/LabelForWhichObstacle"
-        android:layout_toEndOf="@+id/LabelForWhichObstacle"
-        android:onClick="BallCounter"/>
+        android:onClick="BallCounter"
+        android:layout_alignBottom="@+id/SlowPickupCheckbox"
+        android:layout_toRightOf="@+id/Title"
+        android:layout_toEndOf="@+id/Title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Less Than 3 Sec"
+        android:id="@+id/FastDef"
+        android:layout_below="@+id/howfastpickuplabel"
+        android:layout_alignLeft="@+id/TeeterTotterCheckBox"
+        android:layout_alignStart="@+id/TeeterTotterCheckBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Between 3 and 5 Sec"
+        android:id="@+id/MidDef"
+        android:layout_above="@+id/BallsScoredEdittext"
+        android:layout_alignLeft="@+id/FastDef"
+        android:layout_alignStart="@+id/FastDef" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More than 5 sec"
+        android:id="@+id/textView"
+        android:layout_alignTop="@+id/SlowPickupCheckbox"
+        android:layout_alignLeft="@+id/MidDef"
+        android:layout_alignStart="@+id/MidDef" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/SaveButton"
+        android:layout_below="@+id/RoughTerrainCheckBox"
+        android:layout_alignLeft="@+id/TeeterTotterCheckBox"
+        android:layout_alignStart="@+id/TeeterTotterCheckBox" />
 
 </RelativeLayout>
